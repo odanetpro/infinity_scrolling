@@ -1,0 +1,9 @@
+<div>
+  <h2>
+    <%= link_to post.title, posts_path(post) %>
+  </h2>
+
+  <p>
+    <%= truncate(strip_tags(post.body), length: 600) %>
+  </p>
+</div>
