@@ -6,6 +6,6 @@ class PostsController < ApplicationController
   private
 
   def get_posts
-    @posts = Post.all
+    @posts = Post.paginate(page: params[:page], per_page: 5).order(created_at: :desc)
   end
 end
