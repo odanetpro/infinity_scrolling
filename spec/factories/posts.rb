@@ -2,11 +2,11 @@
 
 FactoryBot.define do
   sequence :title do |n|
-    "PostTitle#{n}"
+    "PostTitle#{'%02d' % n}"
   end
 
   sequence :body do |n|
-    "PostBody#{n}"
+    "PostBody#{'%02d' % n}"
   end
 
   factory :post do

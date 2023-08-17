@@ -13,8 +13,8 @@ feature 'User can view list of posts', "
     visit posts_path
 
     posts.each do |post|
-      expect(page).to have_content post.title.to_s
-      expect(page).to have_content post.body.to_s
+      expect(page).to have_content post.title
+      expect(page).to have_content post.body
     end
   end
 end
